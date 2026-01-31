@@ -1,0 +1,114 @@
+[
+  {
+    "id": "excel-data-science",
+    "title": "Excel for Data Science",
+    "category": "Data Science",
+    "description": "Master Excel for data analysis, visualization, and reporting.",
+    "duration": "4 Weeks",
+    "level": "Beginner"
+  },
+  {
+    "id": "excel-ai",
+    "title": "Excel for Data Science with AI",
+    "category": "Data Science",
+    "description": "Integrate AI tools with Excel to automate and enhance data workflows.",
+    "duration": "5 Weeks",
+    "level": "Intermediate"
+  },
+  {
+    "id": "stata-data-science",
+    "title": "STATA for Data Science",
+    "category": "Data Science",
+    "description": "Comprehensive training on STATA for statistical analysis.",
+    "duration": "4 Weeks",
+    "level": "Beginner"
+  },
+  {
+    "id": "stata-ai",
+    "title": "STATA for Data Science with AI",
+    "category": "Data Science",
+    "description": "Advanced STATA techniques combined with AI for predictive modeling.",
+    "duration": "5 Weeks",
+    "level": "Advanced"
+  },
+  {
+    "id": "python-data-science",
+    "title": "Python for Data Science",
+    "category": "Data Science",
+    "description": "Learn Python programming from scratch for data analysis and visualization.",
+    "duration": "8 Weeks",
+    "level": "Beginner to Intermediate"
+  },
+  {
+    "id": "python-ai",
+    "title": "Python for Data Science with AI",
+    "category": "Data Science",
+    "description": "Deep dive into Machine Learning and AI using Python.",
+    "duration": "10 Weeks",
+    "level": "Advanced"
+  },
+  {
+    "id": "sql-data-analysis",
+    "title": "SQL for Data Analysis",
+    "category": "Analytics",
+    "description": "Master SQL queries, joins, and database management for analytics.",
+    "duration": "4 Weeks",
+    "level": "Intermediate"
+  },
+  {
+    "id": "statistics-data-science",
+    "title": "Statistics for Data Science",
+    "category": "Data Science",
+    "description": "Fundamental and advanced statistical concepts for data scientists.",
+    "duration": "6 Weeks",
+    "level": "Intermediate"
+  },
+  {
+    "id": "ml-data-science",
+    "title": "Machine Learning for Data Science",
+    "category": "Data Science",
+    "description": "Build and deploy machine learning models for real-world problems.",
+    "duration": "8 Weeks",
+    "level": "Advanced"
+  },
+  {
+    "id": "power-bi",
+    "title": "Power BI for Data Analytics",
+    "category": "Analytics",
+    "description": "Create stunning dashboards and reports using Microsoft Power BI.",
+    "duration": "5 Weeks",
+    "level": "Intermediate"
+  },
+  {
+    "id": "jamovi",
+    "title": "Jamovi for Statistical Analysis",
+    "category": "Analytics",
+    "description": "Learn Jamovi for easy and effective statistical analysis.",
+    "duration": "3 Weeks",
+    "level": "Beginner"
+  },
+  {
+    "id": "geoda",
+    "title": "GeoDa for Spatial & Geographical Data Analysis",
+    "category": "Analytics",
+    "description": "Analyze spatial data and geographical patterns using GeoDa.",
+    "duration": "4 Weeks",
+    "level": "Intermediate"
+  },
+  {
+    "id": "phd-guidance",
+    "title": "PhD Guidance & Research Support",
+    "category": "Research",
+    "description": "Structured assistance for PhD scholars from topic selection to thesis submission.",
+    "duration": "Flexible",
+    "level": "Research"
+  },
+  {
+    "id": "research-paper",
+    "title": "Research Paper Writing & Publication Support",
+    "category": "Research",
+    "description": "Expert support for drafting, editing, and publishing research papers.",
+    "duration": "Flexible",
+    "level": "Research"
+  }
+]
