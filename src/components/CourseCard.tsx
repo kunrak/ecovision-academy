@@ -28,13 +28,16 @@ export default function CourseCard({ course }: { course: CourseProps }) {
   const gradient = categoryGradients[course.category] ?? "from-primary to-accent";
   const icon = categoryIcons[course.category] ?? "📚";
 
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const imageSrc = course.image ? `${basePath}${course.image}` : null;
+
   return (
     <div className="group bg-card rounded-xl border border-border overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
       {/* Course Image / Fallback Banner */}
       <div className="relative w-full h-56 overflow-hidden">
-        {course.image ? (
+        {imageSrc ? (
           <Image
-            src={course.image}
+            src={imageSrc}
             alt={course.title}
             fill
             className="object-cover object-top group-hover:scale-105 transition-transform duration-500"

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin, Facebook, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Linkedin, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -18,22 +18,28 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <Link
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61580625505067"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-slate-400 hover:text-white transition-colors"
               >
                 <Facebook className="h-5 w-5" />
               </Link>
               <Link
-                href="#"
+                href="https://www.linkedin.com/company/ecovision-academy/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-slate-400 hover:text-white transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
               </Link>
               <Link
-                href="#"
+                href="https://www.youtube.com/@economicssimplified-yu5uh"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-slate-400 hover:text-white transition-colors"
               >
-                <Twitter className="h-5 w-5" />
+                <Youtube className="h-5 w-5" />
               </Link>
             </div>
           </div>
