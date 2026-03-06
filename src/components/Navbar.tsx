@@ -89,12 +89,6 @@ export default function Navbar() {
               Contact
             </Link>
 
-            <Link
-              href="/admin"
-              className="text-xs text-muted-foreground/50 hover:text-primary uppercase tracking-widest font-semibold border border-transparent hover:border-border px-2 py-1 rounded"
-            >
-              Use App
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -151,13 +145,6 @@ export default function Navbar() {
               onClick={toggleMenu}
             >
               Contact
-            </Link>
-            <Link
-              href="/admin"
-              className="block px-3 py-2 rounded-md text-base font-medium text-muted-foreground hover:text-primary hover:bg-muted"
-              onClick={toggleMenu}
-            >
-              Admin
             </Link>
           </div>
         </div>
