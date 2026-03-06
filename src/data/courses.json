@@ -6,7 +6,8 @@
     "description": "Integrate AI tools with Excel to automate and enhance data workflows.",
     "duration": "5 Weeks",
     "level": "Intermediate",
-    "image": "/assets/excel-from-beg-adv.jpeg"
+    "image": "/assets/excel-from-beg-adv.jpeg",
+    "hasBrochure": true
   },
   {
     "id": "stata-ai",
@@ -15,7 +16,8 @@
     "description": "Advanced STATA techniques combined with AI for predictive modeling.",
     "duration": "5 Weeks",
     "level": "Advanced",
-    "image": "/assets/complete-stata.jpeg"
+    "image": "/assets/complete-stata.jpeg",
+    "hasBrochure": true
   },
   {
     "id": "python-ai",
@@ -24,7 +26,8 @@
     "description": "Deep dive into Machine Learning and AI using Python.",
     "duration": "10 Weeks",
     "level": "Advanced",
-    "image": "/assets/python-data-sci.jpeg"
+    "image": "/assets/python-data-sci.jpeg",
+    "hasBrochure": true
   },
   {
     "id": "sql-data-science",
@@ -33,7 +36,8 @@
     "description": "Master SQL queries, joins, and database management for analytics.",
     "duration": "4 Weeks",
     "level": "Intermediate",
-    "image": "/assets/complete-sql.jpeg"
+    "image": "/assets/complete-sql.jpeg",
+    "hasBrochure": true
   },
   {
     "id": "statistics-data-science",
@@ -42,7 +46,8 @@
     "description": "Fundamental and advanced statistical concepts for data scientists.",
     "duration": "6 Weeks",
     "level": "Intermediate",
-    "image": null
+    "image": null,
+    "hasBrochure": false
   },
   {
     "id": "ml-data-science",
@@ -51,7 +56,8 @@
     "description": "Build and deploy machine learning models for real-world problems.",
     "duration": "8 Weeks",
     "level": "Advanced",
-    "image": "/assets/machine-learning-data.sci.jpeg"
+    "image": "/assets/machine-learning-data.sci.jpeg",
+    "hasBrochure": true
   },
   {
     "id": "power-bi",
@@ -60,7 +66,8 @@
     "description": "Create stunning dashboards and reports using Microsoft Power BI.",
     "duration": "5 Weeks",
     "level": "Intermediate",
-    "image": "/assets/power-bi.jpeg"
+    "image": "/assets/power-bi.jpeg",
+    "hasBrochure": false
   },
   {
     "id": "jamovi",
@@ -69,7 +76,8 @@
     "description": "Learn Jamovi for easy and effective statistical analysis.",
     "duration": "3 Weeks",
     "level": "Beginner",
-    "image": null
+    "image": null,
+    "hasBrochure": false
   },
   {
     "id": "geoda",
@@ -78,7 +86,8 @@
     "description": "Analyze spatial data and geographical patterns using GeoDa.",
     "duration": "4 Weeks",
     "level": "Intermediate",
-    "image": null
+    "image": null,
+    "hasBrochure": false
   },
   {
     "id": "phd-guidance",
@@ -87,7 +96,8 @@
     "description": "Structured assistance for PhD scholars from topic selection to thesis submission.",
     "duration": "Flexible",
     "level": "Research",
-    "image": null
+    "image": null,
+    "hasBrochure": false
   },
   {
     "id": "research-paper",
@@ -96,6 +106,7 @@
     "description": "Expert support for drafting, editing, and publishing research papers.",
     "duration": "Flexible",
     "level": "Research",
-    "image": null
+    "image": null,
+    "hasBrochure": false
   }
 ]

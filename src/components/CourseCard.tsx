@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import { Clock, BarChart } from "lucide-react";
 
@@ -10,6 +9,7 @@ interface CourseProps {
   duration: string;
   level: string;
   image?: string | null;
+  hasBrochure?: boolean;
 }
 
 const categoryGradients: Record<string, string> = {
@@ -78,12 +78,22 @@ export default function CourseCard({ course }: { course: CourseProps }) {
           </div>
         </div>
 
-        <Link
-          href={`/courses?id=${course.id}`}
-          className="w-full block text-center py-2.5 px-4 bg-secondary text-white rounded-lg font-medium hover:bg-primary transition-colors duration-300"
-        >
-          View Details
-        </Link>
+        {course.hasBrochure ? (
+          <a
+            href={`${basePath}/brochures/${course.id}.pdf`}
+            download={`${course.id}-brochure.pdf`}
+            className="w-full block text-center py-2.5 px-4 bg-secondary text-white rounded-lg font-medium hover:bg-primary transition-colors duration-300"
+          >
+            Download Brochure
+          </a>
+        ) : (
+          <button
+            disabled
+            className="w-full block text-center py-2.5 px-4 bg-slate-200 text-slate-400 rounded-lg font-medium cursor-not-allowed"
+          >
+            Brochure Coming Soon
+          </button>
+        )}
       </div>
     </div>
   );
