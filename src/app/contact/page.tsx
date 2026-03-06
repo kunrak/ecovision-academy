@@ -1,4 +1,5 @@
 import { Phone, Mail, Clock, MapPin } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
 
 export default function ContactPage() {
   return (
@@ -79,92 +80,8 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Simple Form (Visual Only for static site, or mailto link) */}
-          <div className="bg-card p-8 rounded-2xl shadow-lg border border-border">
-            <h3 className="text-2xl font-heading font-bold mb-6 text-foreground">
-              Send us a Message
-            </h3>
-            <form
-              className="space-y-4"
-              action="mailto:academyecovision@gmail.com"
-              method="post"
-              encType="text/plain"
-            >
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-foreground mb-1"
-                >
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-                  placeholder="John Doe"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-foreground mb-1"
-                >
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-                  placeholder="+91 98765 43210"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="interest"
-                  className="block text-sm font-medium text-foreground mb-1"
-                >
-                  Interested In
-                </label>
-                <select
-                  id="interest"
-                  name="interest"
-                  className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-                >
-                  <option>Data Science Course</option>
-                  <option>Research Support</option>
-                  <option>PhD Guidance</option>
-                  <option>Career Counselling</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-foreground mb-1"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-                  placeholder="How can we help you?"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-primary hover:bg-teal-600 text-white font-bold py-3 rounded-lg transition-colors"
-              >
-                Send Message
-              </button>
-              <p className="text-xs text-center text-muted-foreground mt-2">
-                This will open your default email client.
-              </p>
-            </form>
-          </div>
+          {/* Dynamic Form */}
+          <ContactForm />
         </div>
       </div>
     </div>
