@@ -142,7 +142,7 @@ export default function Footer() {
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-primary-foreground shrink-0" />
                 <span className="text-slate-300 text-sm">
-                  info@ecovisionacademy.com
+                  academyecovision@gmail.com
                 </span>
               </li>
             </ul>

@@ -1,27 +1,12 @@
 [
   {
-    "id": "excel-data-science",
-    "title": "Excel for Data Science",
-    "category": "Data Science",
-    "description": "Master Excel for data analysis, visualization, and reporting.",
-    "duration": "4 Weeks",
-    "level": "Beginner"
-  },
-  {
     "id": "excel-ai",
     "title": "Excel for Data Science with AI",
     "category": "Data Science",
     "description": "Integrate AI tools with Excel to automate and enhance data workflows.",
     "duration": "5 Weeks",
-    "level": "Intermediate"
-  },
-  {
-    "id": "stata-data-science",
-    "title": "STATA for Data Science",
-    "category": "Data Science",
-    "description": "Comprehensive training on STATA for statistical analysis.",
-    "duration": "4 Weeks",
-    "level": "Beginner"
+    "level": "Intermediate",
+    "image": "/assets/excel-from-beg-adv.jpeg"
   },
   {
     "id": "stata-ai",
@@ -29,15 +14,8 @@
     "category": "Data Science",
     "description": "Advanced STATA techniques combined with AI for predictive modeling.",
     "duration": "5 Weeks",
-    "level": "Advanced"
-  },
-  {
-    "id": "python-data-science",
-    "title": "Python for Data Science",
-    "category": "Data Science",
-    "description": "Learn Python programming from scratch for data analysis and visualization.",
-    "duration": "8 Weeks",
-    "level": "Beginner to Intermediate"
+    "level": "Advanced",
+    "image": "/assets/complete-stata.jpeg"
   },
   {
     "id": "python-ai",
@@ -45,15 +23,17 @@
     "category": "Data Science",
     "description": "Deep dive into Machine Learning and AI using Python.",
     "duration": "10 Weeks",
-    "level": "Advanced"
+    "level": "Advanced",
+    "image": "/assets/python-data-sci.jpeg"
   },
   {
-    "id": "sql-data-analysis",
-    "title": "SQL for Data Analysis",
+    "id": "sql-data-science",
+    "title": "SQL for Data Science",
     "category": "Analytics",
     "description": "Master SQL queries, joins, and database management for analytics.",
     "duration": "4 Weeks",
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "image": "/assets/complete-sql.jpeg"
   },
   {
     "id": "statistics-data-science",
@@ -61,7 +41,8 @@
     "category": "Data Science",
     "description": "Fundamental and advanced statistical concepts for data scientists.",
     "duration": "6 Weeks",
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "image": null
   },
   {
     "id": "ml-data-science",
@@ -69,7 +50,8 @@
     "category": "Data Science",
     "description": "Build and deploy machine learning models for real-world problems.",
     "duration": "8 Weeks",
-    "level": "Advanced"
+    "level": "Advanced",
+    "image": "/assets/machine-learning-data.sci.jpeg"
   },
   {
     "id": "power-bi",
@@ -77,7 +59,8 @@
     "category": "Analytics",
     "description": "Create stunning dashboards and reports using Microsoft Power BI.",
     "duration": "5 Weeks",
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "image": "/assets/power-bi.jpeg"
   },
   {
     "id": "jamovi",
@@ -85,7 +68,8 @@
     "category": "Analytics",
     "description": "Learn Jamovi for easy and effective statistical analysis.",
     "duration": "3 Weeks",
-    "level": "Beginner"
+    "level": "Beginner",
+    "image": null
   },
   {
     "id": "geoda",
@@ -93,7 +77,8 @@
     "category": "Analytics",
     "description": "Analyze spatial data and geographical patterns using GeoDa.",
     "duration": "4 Weeks",
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "image": null
   },
   {
     "id": "phd-guidance",
@@ -101,7 +86,8 @@
     "category": "Research",
     "description": "Structured assistance for PhD scholars from topic selection to thesis submission.",
     "duration": "Flexible",
-    "level": "Research"
+    "level": "Research",
+    "image": null
   },
   {
     "id": "research-paper",
@@ -109,6 +95,7 @@
     "category": "Research",
     "description": "Expert support for drafting, editing, and publishing research papers.",
     "duration": "Flexible",
-    "level": "Research"
+    "level": "Research",
+    "image": null
   }
 ]

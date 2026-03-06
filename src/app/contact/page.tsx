@@ -41,7 +41,7 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-semibold text-foreground">Email</h4>
                     <p className="text-muted-foreground">
-                      info@ecovisionacademy.com
+                      academyecovision@gmail.com
                     </p>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ export default function ContactPage() {
             </h3>
             <form
               className="space-y-4"
-              action="mailto:info@ecovisionacademy.com"
+              action="mailto:academyecovision@gmail.com"
               method="post"
               encType="text/plain"
             >
