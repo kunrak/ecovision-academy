@@ -10,6 +10,7 @@ interface CourseProps {
   level: string;
   image?: string | null;
   hasBrochure?: boolean;
+  brochureUrl?: string | null;
 }
 
 const categoryGradients: Record<string, string> = {
@@ -29,7 +30,14 @@ export default function CourseCard({ course }: { course: CourseProps }) {
   const icon = categoryIcons[course.category] ?? "📚";
 
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  const imageSrc = course.image ? `${basePath}${course.image}` : null;
+  
+  // Use Sanity image URL if it starts with http, otherwise use local path
+  const imageSrc = course.image 
+    ? (course.image.startsWith('http') ? course.image : `${basePath}${course.image}`) 
+    : null;
+
+  // Use Sanity brochure URL if available, otherwise fallback to local convention
+  const brochureDownloadUrl = course.brochureUrl || `${basePath}/brochures/${course.id}.pdf`;
 
   return (
     <div className="group bg-card rounded-xl border border-border overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
@@ -80,7 +88,9 @@ export default function CourseCard({ course }: { course: CourseProps }) {
 
         {course.hasBrochure ? (
           <a
-            href={`${basePath}/brochures/${course.id}.pdf`}
+            href={brochureDownloadUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             download={`${course.id}-brochure.pdf`}
             className="w-full block text-center py-2.5 px-4 bg-secondary text-white rounded-lg font-medium hover:bg-primary transition-colors duration-300"
           >

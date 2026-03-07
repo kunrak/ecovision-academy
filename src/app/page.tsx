@@ -1,10 +1,20 @@
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-import courses from "@/data/courses.json";
+import localCourses from "@/data/courses.json";
+import { getFeaturedCourses } from "@/sanity/client";
 import CourseCard from "@/components/CourseCard";
 
-export default function Home() {
-  const featuredCourses = courses.slice(0, 3);
+export default async function Home() {
+  // Try fetching from Sanity
+  let courses = [];
+  try {
+    courses = await getFeaturedCourses();
+  } catch (error) {
+    console.error("Sanity fetch error for featured courses:", error);
+  }
+
+  // Fallback to local data if Sanity is not configured or has no courses
+  const featuredCourses = courses.length > 0 ? courses : localCourses.slice(0, 3);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -114,7 +124,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredCourses.map((course) => (
+            {featuredCourses.map((course: any) => (
               <CourseCard key={course.id} course={course} />
             ))}
           </div>

@@ -1,7 +1,19 @@
-import courses from "@/data/courses.json";
+import { getCourses } from "@/sanity/client";
+import localCourses from "@/data/courses.json";
 import CourseCard from "@/components/CourseCard";
 
-export default function CoursesPage() {
+export default async function CoursesPage() {
+  // Try fetching from Sanity
+  let courses = [];
+  try {
+    courses = await getCourses();
+  } catch (error) {
+    console.error("Sanity fetch error, using local data:", error);
+  }
+
+  // Fallback to local data if Sanity is not configured or has no courses
+  const displayCourses = courses?.length > 0 ? courses : localCourses;
+
   return (
     <div className="min-h-screen bg-muted/30 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,7 +28,7 @@ export default function CoursesPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {courses.map((course) => (
+          {displayCourses.map((course: any) => (
             <CourseCard key={course.id} course={course} />
           ))}
         </div>
