@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, ChevronDown, GraduationCap } from "lucide-react";
+import Image from "next/image";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,8 +16,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <GraduationCap className="h-8 w-8 text-primary" />
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/assets/ev-logo.jpeg"
+              alt="Ecovision Academy"
+              width={180}
+              height={50}
+              className="h-12 w-auto mr-4"
+              priority
+            />
             <span className="font-heading font-bold text-xl tracking-tight text-foreground">
               Ecovision <span className="text-primary">Academy</span>
             </span>

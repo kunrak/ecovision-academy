@@ -4,10 +4,10 @@ const WhatsAppWidget = () => {
   return (
     <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex flex-col items-end gap-3 pointer-events-none">
       <a
-        href="https://chat.whatsapp.com/HMlzApomRII3spQgL8Arip?mode=gi_t"
+        href="https://wa.me/7450882312"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Join our WhatsApp group"
+        aria-label="Chat with us on WhatsApp"
         className="pointer-events-auto group relative flex items-center justify-center p-3 rounded-full bg-[#25D366] text-white shadow-lg shadow-[#25D366]/30 transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#25D366]/40 focus:outline-none focus:ring-4 focus:ring-[#25D366]/50"
       >
         <div className="absolute inset-0 rounded-full animate-ping bg-[#25D366] opacity-30 group-hover:opacity-0 transition-opacity"></div>
