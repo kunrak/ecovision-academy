@@ -1,19 +1,38 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-import courses from "@/data/courses.json";
+import localCourses from "@/data/courses.json";
 import CourseCard from "@/components/CourseCard";
+import { getCourses } from "@/lib/notion";
 
-export default function Home() {
-  const featuredCourses = courses.slice(0, 3);
+// Revalidate this page every 60 seconds (Incremental Static Regeneration)
+export const revalidate = 60;
+
+export default async function Home() {
+  const notionCourses = await getCourses();
+  const displayCourses = notionCourses.length > 0 ? notionCourses : localCourses;
+  const featuredCourses = displayCourses.slice(0, 3);
 
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-secondary via-[#1e293b] to-background text-white pt-20 pb-32">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="relative overflow-hidden bg-secondary text-white pb-16">
+        {/* Hero — intrinsic 1264×445; container matches aspect so nothing is cropped */}
+        <div className="w-full relative aspect-[1264/445] bg-secondary">
+          <Image
+            src="/assets/hero-image.jpeg"
+            alt="Ecovision Academy — Data Analytics, Research, and Technology"
+            fill
+            className="object-cover object-center"
+            priority
+            sizes="100vw"
+          />
+        </div>
+
+        {/* Text Content Below Image */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-14 md:mt-20">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl sm:text-6xl font-heading font-extrabold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400">
+            <h1 className="text-4xl sm:text-6xl font-heading font-extrabold tracking-tight mb-6">
               Master Data Science & <br />
               <span className="text-primary-foreground">
                 Research Excellence

@@ -142,7 +142,6 @@ export default function Footer() {
                 <Phone className="h-5 w-5 text-primary-foreground shrink-0" />
                 <div className="flex flex-col">
                   <span className="text-slate-300 text-sm">7450882312</span>
-                  <span className="text-slate-300 text-sm">7605844893</span>
                 </div>
               </li>
               <li className="flex items-center space-x-3">

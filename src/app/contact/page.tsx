@@ -30,7 +30,6 @@ export default function ContactPage() {
                       Phone / WhatsApp
                     </h4>
                     <p className="text-muted-foreground">7450882312</p>
-                    <p className="text-muted-foreground">7605844893</p>
                     <p className="text-sm text-slate-400 mt-1">
                       Call to book an appointment
                     </p>

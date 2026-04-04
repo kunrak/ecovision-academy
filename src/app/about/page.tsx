@@ -14,6 +14,18 @@ const mentors = [
     image: "/assets/atanu-das.jpeg",
     bio: "Atanu brings deep expertise in quantitative research, econometrics, and academic publishing. He specializes in guiding PhD scholars and professionals through complex research workflows, from data collection and analysis to final publication.",
   },
+  {
+    name: "Arkaprava Pal",
+    title: "Founder & Lead Data Science Mentor",
+    image: "/assets/arkaprabha-pal.jpeg",
+    bio: "Arkaprava is a seasoned data scientist and educator with extensive experience in statistical modeling, machine learning, and research methodology. He founded Ecovision Academy with a mission to make high-quality data science education accessible, practical, and career-focused.",
+  },
+  {
+    name: "Atanu Das",
+    title: "Senior Research & Analytics Mentor",
+    image: "/assets/atanu-das.jpeg",
+    bio: "Atanu brings deep expertise in quantitative research, econometrics, and academic publishing. He specializes in guiding PhD scholars and professionals through complex research workflows, from data collection and analysis to final publication.",
+  },
 ];
 
 export default function AboutPage() {

@@ -1,7 +1,16 @@
-import courses from "@/data/courses.json";
+import localCourses from "@/data/courses.json";
 import CourseCard from "@/components/CourseCard";
+import { getCourses } from "@/lib/notion";
 
-export default function CoursesPage() {
+// Revalidate this page every 60 seconds (Incremental Static Regeneration)
+export const revalidate = 60;
+
+export default async function CoursesPage() {
+  const notionCourses = await getCourses();
+  
+  // If Notion is connected and has courses, use them; otherwise fallback to local JSON
+  const displayCourses = notionCourses.length > 0 ? notionCourses : localCourses;
+
   return (
     <div className="min-h-screen bg-muted/30 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,7 +25,7 @@ export default function CoursesPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {courses.map((course) => (
+          {displayCourses.map((course) => (
             <CourseCard key={course.id} course={course} />
           ))}
         </div>

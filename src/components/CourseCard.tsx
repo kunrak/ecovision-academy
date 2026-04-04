@@ -10,6 +10,7 @@ interface CourseProps {
   level: string;
   image?: string | null;
   hasBrochure?: boolean;
+  brochureUrl?: string | null;
 }
 
 const categoryGradients: Record<string, string> = {
@@ -40,6 +41,7 @@ export default function CourseCard({ course }: { course: CourseProps }) {
             src={imageSrc}
             alt={course.title}
             fill
+            unoptimized
             className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
           />
         ) : (
@@ -78,10 +80,12 @@ export default function CourseCard({ course }: { course: CourseProps }) {
           </div>
         </div>
 
-        {course.hasBrochure ? (
+        {course.brochureUrl || course.hasBrochure ? (
           <a
-            href={`${basePath}/brochures/${course.id}.pdf`}
+            href={course.brochureUrl || `${basePath}/brochures/${course.id}.pdf`}
             download={`${course.id}-brochure.pdf`}
+            target={course.brochureUrl ? "_blank" : undefined}
+            rel={course.brochureUrl ? "noopener noreferrer" : undefined}
             className="w-full block text-center py-2.5 px-4 bg-secondary text-white rounded-lg font-medium hover:bg-primary transition-colors duration-300"
           >
             Download Brochure
