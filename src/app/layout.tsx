@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -30,12 +31,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
+      <ThemeProvider>
       <body className="antialiased min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-grow pt-16">{children}</main>
         <Footer />
         <WhatsAppWidget />
       </body>
+    </ThemeProvider>
     </html>
   );
 }

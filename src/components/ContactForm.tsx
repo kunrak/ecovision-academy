@@ -10,6 +10,7 @@ export default function ContactForm() {
     phone: "",
     interest: "Data Science Course",
     message: "",
+    website: "",
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
     "idle"
@@ -57,6 +58,7 @@ export default function ContactForm() {
         phone: "",
         interest: "Data Science Course",
         message: "",
+        website: "",
       });
     } catch (error: any) {
       console.error("Submission error:", error);
@@ -183,6 +185,18 @@ export default function ContactForm() {
             placeholder="How can we help you?"
           ></textarea>
         </div>
+
+        {/* Honeypot field - hidden from users, for bot detection */}
+        <input
+          type="text"
+          name="website"
+          value={formData.website || ""}
+          onChange={handleChange}
+          className="hidden"
+          tabIndex={-1}
+          autoComplete="off"
+          style={{ display: 'none' }}
+        />
 
         {status === "error" && (
           <div className="flex items-center space-x-2 text-red-500 text-sm bg-red-50 p-3 rounded-lg border border-red-100">

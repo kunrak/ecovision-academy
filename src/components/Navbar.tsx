@@ -3,13 +3,19 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Sun, Moon } from "lucide-react";
+import { useTheme } from "./ThemeProvider";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
+  const { setTheme, resolvedTheme } = useTheme();
+
+  const toggleTheme = () => {
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+  };
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -97,6 +103,14 @@ export default function Navbar() {
               Contact
             </Link>
 
+            <button
+              onClick={toggleTheme}
+              aria-label={`Switch to ${resolvedTheme === "dark" ? "light" : "dark"} mode`}
+              className="p-2 rounded-md text-muted-foreground hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            >
+              {resolvedTheme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </button>
+
           </div>
 
           {/* Mobile Menu Button */}
@@ -154,6 +168,14 @@ export default function Navbar() {
             >
               Contact
             </Link>
+            <button
+              onClick={toggleTheme}
+              aria-label={`Switch to ${resolvedTheme === "dark" ? "light" : "dark"} mode`}
+              className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-muted"
+            >
+              {resolvedTheme === "dark" ? <Sun className="h-5 w-5 mr-2" /> : <Moon className="h-5 w-5 mr-2" />}
+              {resolvedTheme === "dark" ? "Light Mode" : "Dark Mode"}
+            </button>
           </div>
         </div>
       )}

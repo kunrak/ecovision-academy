@@ -11,7 +11,7 @@
   --secondary: #1e293b; /* Slate 800 */
   --secondary-foreground: #ffffff;
 
-  --accent: #f59e0b; /* Amber 500 */
+  --accent: #d97706; /* Amber 600 - WCAG compliant on white */
   --accent-foreground: #ffffff;
 
   /* Surfaces */
@@ -19,7 +19,7 @@
   --card-foreground: #0f172a;
 
   --muted: #f1f5f9; /* Slate 100 */
-  --muted-foreground: #64748b; /* Slate 500 */
+  --muted-foreground: #475569; /* Slate 600 - better contrast on white */
 
   /* Borders */
   --border: #e2e8f0; /* Slate 200 */
@@ -50,28 +50,26 @@
   --font-heading: var(--font-outfit);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #020617; /* Slate 950 */
-    --foreground: #f8fafc; /* Slate 50 */
+[data-theme="dark"] {
+  --background: #020617; /* Slate 950 */
+  --foreground: #f8fafc; /* Slate 50 */
 
-    --primary: #14b8a6; /* Teal 500 - brighter for dark mode */
-    --primary-foreground: #0f172a;
+  --primary: #14b8a6; /* Teal 500 - brighter for dark mode */
+  --primary-foreground: #0f172a;
 
-    --secondary: #334155; /* Slate 700 */
-    --secondary-foreground: #f8fafc;
+  --secondary: #334155; /* Slate 700 */
+  --secondary-foreground: #f8fafc;
 
-    --accent: #fbbf24; /* Amber 400 */
-    --accent-foreground: #0f172a;
+  --accent: #fbbf24; /* Amber 400 */
+  --accent-foreground: #0f172a;
 
-    --card: #0f172a; /* Slate 900 */
-    --card-foreground: #f8fafc;
+  --card: #0f172a; /* Slate 900 */
+  --card-foreground: #f8fafc;
 
-    --muted: #1e293b; /* Slate 800 */
-    --muted-foreground: #94a3b8; /* Slate 400 */
+  --muted: #1e293b; /* Slate 800 */
+  --muted-foreground: #94a3b8; /* Slate 400 */
 
-    --border: #1e293b; /* Slate 800 */
-  }
+  --border: #1e293b; /* Slate 800 */
 }
 
 body {
@@ -80,6 +78,29 @@ body {
   font-family: var(--font-sans), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 h1,
