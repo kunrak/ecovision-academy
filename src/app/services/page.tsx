@@ -15,10 +15,9 @@ export default function ServicesPage() {
         </div>
 
         <div className="space-y-20">
-          {/* PhD Guidance */}
           <section
             id="phd-guidance"
-            className="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-border"
+            className="bg-card rounded-2xl p-8 md:p-12 shadow-sm border border-border"
           >
             <div className="flex flex-col md:flex-row items-start gap-8">
               <div className="bg-primary/10 p-4 rounded-xl">
@@ -42,7 +41,7 @@ export default function ServicesPage() {
                   ].map((item) => (
                     <div
                       key={item}
-                      className="flex items-center text-sm font-medium text-slate-700"
+                      className="flex items-center text-sm font-medium text-muted-foreground"
                     >
                       <div className="w-1.5 h-1.5 bg-accent rounded-full mr-2.5"></div>
                       {item}
@@ -53,10 +52,9 @@ export default function ServicesPage() {
             </div>
           </section>
 
-          {/* Research Paper Support */}
           <section
             id="research-support"
-            className="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-border"
+            className="bg-card rounded-2xl p-8 md:p-12 shadow-sm border border-border"
           >
             <div className="flex flex-col md:flex-row items-start gap-8">
               <div className="bg-blue-100 p-4 rounded-xl">
@@ -81,7 +79,7 @@ export default function ServicesPage() {
                   ].map((item) => (
                     <div
                       key={item}
-                      className="flex items-center text-sm font-medium text-slate-700"
+                      className="flex items-center text-sm font-medium text-muted-foreground"
                     >
                       <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2.5"></div>
                       {item}
@@ -92,10 +90,9 @@ export default function ServicesPage() {
             </div>
           </section>
 
-          {/* Career Guidance */}
           <section
             id="career-counselling"
-            className="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-border"
+            className="bg-card rounded-2xl p-8 md:p-12 shadow-sm border border-border"
           >
             <div className="flex flex-col md:flex-row items-start gap-8">
               <div className="bg-purple-100 p-4 rounded-xl">

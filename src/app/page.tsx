@@ -10,7 +10,14 @@ export const revalidate = 60;
 export default async function Home() {
   const notionCourses = await getCourses();
   const displayCourses = notionCourses.length > 0 ? notionCourses : localCourses;
-  const featuredCourses = displayCourses.slice(0, 3);
+
+  const featuredCourses = displayCourses
+    .sort((a, b) => {
+      const aHasAssets = (a.image || a.brochureUrl) ? 1 : 0;
+      const bHasAssets = (b.image || b.brochureUrl) ? 1 : 0;
+      return bHasAssets - aHasAssets;
+    })
+    .slice(0, 3);
 
   return (
     <div className="flex flex-col min-h-screen">
