@@ -3,26 +3,26 @@ import { CheckCircle } from "lucide-react";
 
 const mentors = [
   {
-    name: "Arkaprava Pal",
-    title: "Founder & Lead Data Science Mentor",
-    image: "/assets/arkaprabha-pal.jpeg",
-    bio: "Arkaprava is a seasoned data scientist and educator with extensive experience in statistical modeling, machine learning, and research methodology. He founded Ecovision Academy with a mission to make high-quality data science education accessible, practical, and career-focused.",
+    name: "Sayak Ghosh",
+    title: "Founder & Mentor, Ecovision Academy",
+    image: "/assets/sayak-ghosh.jpeg",
+    bio: "Sayak Ghosh is the Founder and Mentor of Ecovision Academy, with over four years of research experience in economics. His work has been published in UGC CARE-listed journals, including the Bengal Economic Association and Cambridge Scholars Publishing. He has also contributed to a two-year project under NITI Aayog. Sayak has actively participated in several national and international conferences, earning multiple Best Paper Awards. He holds an M.Sc. in Economics, securing First Class First.",
+  },
+  {
+    name: "Turjo Sarkar",
+    title: "Program Coordinator & Marketing Consultant",
+    image: "/assets/turjo-sarkar.jpeg",
+    bio: "Turjo brings strong expertise in marketing strategy, program coordination, and client engagement. He specializes in managing academic and professional initiatives, ensuring seamless execution while driving growth through effective outreach and communication.",
+  },
+  {
+    name: "Arka Prabha Pal",
+    title: "Academic Content Developer",
+    image: "/assets/arka-prabha-pal.jpeg",
+    bio: "Arka specializes in developing high-quality academic content across economics and related disciplines. He brings strong expertise in research-based writing, concept simplification, and curriculum-focused material creation, helping students and professionals grasp complex topics with clarity and precision.",
   },
   {
     name: "Atanu Das",
-    title: "Senior Research & Analytics Mentor",
-    image: "/assets/atanu-das.jpeg",
-    bio: "Atanu brings deep expertise in quantitative research, econometrics, and academic publishing. He specializes in guiding PhD scholars and professionals through complex research workflows, from data collection and analysis to final publication.",
-  },
-  {
-    name: "Arkaprava Pal",
-    title: "Founder & Lead Data Science Mentor",
-    image: "/assets/arkaprabha-pal.jpeg",
-    bio: "Arkaprava is a seasoned data scientist and educator with extensive experience in statistical modeling, machine learning, and research methodology. He founded Ecovision Academy with a mission to make high-quality data science education accessible, practical, and career-focused.",
-  },
-  {
-    name: "Atanu Das",
-    title: "Senior Research & Analytics Mentor",
+    title: "Marketing Manager",
     image: "/assets/atanu-das.jpeg",
     bio: "Atanu brings deep expertise in quantitative research, econometrics, and academic publishing. He specializes in guiding PhD scholars and professionals through complex research workflows, from data collection and analysis to final publication.",
   },

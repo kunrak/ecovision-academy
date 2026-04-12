@@ -5,7 +5,6 @@ import localCourses from "@/data/courses.json";
 import CourseCard from "@/components/CourseCard";
 import { getCourses } from "@/lib/notion";
 
-// Revalidate this page every 60 seconds (Incremental Static Regeneration)
 export const revalidate = 60;
 
 export default async function Home() {
@@ -15,10 +14,8 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
       <section className="relative overflow-hidden bg-secondary text-white pb-16">
-        {/* Hero — intrinsic 1264×445; container matches aspect so nothing is cropped */}
-        <div className="w-full relative aspect-[1264/445] bg-secondary">
+        <div className="w-full relative aspect-[1264/490] bg-secondary">
           <Image
             src="/assets/hero-image.jpeg"
             alt="Ecovision Academy — Data Analytics, Research, and Technology"
@@ -29,7 +26,6 @@ export default async function Home() {
           />
         </div>
 
-        {/* Text Content Below Image */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-14 md:mt-20">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl sm:text-6xl font-heading font-extrabold tracking-tight mb-6">
@@ -61,12 +57,10 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* About Highlight */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-secondary aspect-video lg:aspect-square flex items-center justify-center">
-              {/* Placeholder for About Image - could be a generated image later */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/80 mix-blend-multiply"></div>
               <h3 className="relative z-10 text-3xl font-heading font-bold text-white/90 text-center px-4">
                 Empowering <br />
@@ -116,7 +110,6 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Featured Courses */}
       <section className="py-20 bg-muted/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -149,7 +142,6 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Call to Action */}
       <section className="py-20 bg-primary">
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
           <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-6">

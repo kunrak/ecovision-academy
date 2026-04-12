@@ -2,13 +2,11 @@ import localCourses from "@/data/courses.json";
 import CourseCard from "@/components/CourseCard";
 import { getCourses } from "@/lib/notion";
 
-// Revalidate this page every 60 seconds (Incremental Static Regeneration)
 export const revalidate = 60;
 
 export default async function CoursesPage() {
   const notionCourses = await getCourses();
   
-  // If Notion is connected and has courses, use them; otherwise fallback to local JSON
   const displayCourses = notionCourses.length > 0 ? notionCourses : localCourses;
 
   return (

@@ -26,9 +26,6 @@ export async function getCourses(): Promise<NotionCourse[]> {
   try {
     let effectiveDataSourceId = DATABASE_ID;
 
-    // The new Notion API (v2025-09-03) distinguishes between Databases and Data Sources.
-    // dataSources.query requires a data_source_id. If DATABASE_ID is a database container,
-    // we need to find its primary data source ID.
     try {
       const db = await notion.databases.retrieve({ database_id: DATABASE_ID });
       const dataSources = (db as any).data_sources;
@@ -36,12 +33,10 @@ export async function getCourses(): Promise<NotionCourse[]> {
         effectiveDataSourceId = dataSources[0].id;
       }
     } catch (e) {
-      // If retrieve fails, assume DATABASE_ID is already a data_source_id
     }
 
     const response = await (notion as any).dataSources.query({
       data_source_id: effectiveDataSourceId,
-      // Temporarily removing filter to ensure courses with unassigned status are fetched
     });
 
     if (response.results.length === 0) {
@@ -51,7 +46,6 @@ export async function getCourses(): Promise<NotionCourse[]> {
     return response.results.map((page: any) => {
       const props = page.properties;
 
-      // Extract values safely
       const title = props.Name?.title?.[0]?.plain_text || "Untitled Course";
       const category = props.Category?.select?.name || "Uncategorized";
       const description = props.Description?.rich_text?.[0]?.plain_text || "";
@@ -59,11 +53,9 @@ export async function getCourses(): Promise<NotionCourse[]> {
       const level = props.Level?.select?.name || "Beginner";
       const id = props.ID?.rich_text?.[0]?.plain_text || page.id;
 
-      // Handle Image (Files & Media)
       const imageFile = props.Image?.files?.[0];
       const image = imageFile?.file?.url || imageFile?.external?.url || null;
 
-      // Handle Brochure (Files & Media)
       const brochureFile = props.Brochure?.files?.[0];
       const brochureUrl = brochureFile?.file?.url || brochureFile?.external?.url || null;
 
